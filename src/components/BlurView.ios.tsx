@@ -5,6 +5,7 @@ import NativeBlurView from '../fabric/BlurViewNativeComponent';
 type BlurType =
   | 'dark'
   | 'light'
+  | 'transparent'
   | 'xlight'
   | 'prominent'
   | 'regular'
@@ -29,6 +30,7 @@ export type BlurViewProps = ViewProps & {
   blurType?: BlurType;
   blurAmount?: number;
   reducedTransparencyFallbackColor?: string;
+  overlayColor?: string;
 };
 
 const BlurView = forwardRef<View, BlurViewProps>(
